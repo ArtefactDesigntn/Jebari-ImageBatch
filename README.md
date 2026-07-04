@@ -8,19 +8,24 @@ Custom ComfyUI nodes for loading and batching images from multiple sources.
 - **Image Batch (Inputs)** — connect up to 10 `IMAGE` inputs.
 - **Image Batch (From Folder)** — point to a folder on the ComfyUI server and iterate its images.
 
-All three advance automatically: each **Run** outputs the next image in order. Set ComfyUI's batch count (top toolbar) to the number of images you want and click Run once — ComfyUI queues one job per image. The counter loops back to the first image after the last one (no errors, nothing to reset).
+## How to use it
 
-Use the **selection** field (Upload node) to restrict which images are used, e.g. `1,3,5-7`. Leave empty to use all.
+1. Load your images (drag & drop, connect them, or point to a folder).
+2. Set ComfyUI's **batch count** (top toolbar, next to Run) to the number of images you have.
+3. Click **Run** once.
+
+That's it — ComfyUI queues one job per image and runs through them in order automatically. After the last image it loops back to the first one, so nothing ever stops or errors out.
+
+Want to only process some of the images? Use the **selection** field (Upload node), e.g. `1,3,5-7`. Leave it empty to use all of them.
 
 ## Installation
 
-1. Download or clone this repo into your ComfyUI `custom_nodes` folder:
-   ```
-   cd ComfyUI/custom_nodes
-   git clone https://github.com/YOUR_USERNAME/Jebari-ImageBatch.git
-   ```
-2. Restart ComfyUI.
-3. Hard-refresh the browser tab (Ctrl+F5).
+```
+cd ComfyUI/custom_nodes
+git clone https://github.com/ArtefactDesigntn/Jebari-ImageBatch.git
+```
+
+Then restart ComfyUI and refresh your browser tab (Ctrl+F5).
 
 ## Requirements
 

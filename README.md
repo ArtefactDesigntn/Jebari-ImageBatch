@@ -1,5 +1,7 @@
 # Jebari-ImageBatch
 
+![Image Batch (Upload) node](screenshot.png)
+
 Custom ComfyUI nodes for loading and batching images from multiple sources.
 
 ## Nodes
